@@ -535,25 +535,23 @@
             <!--#endregion-->
           </div>
           <div>
-            <form class="form-subscribe">
-              <div>
-                <p class="p-subscribe">Subscribe</p>
-                <div>
-                  <label>
-                    <input
-                      class="input-subscribe"
-                      type="email"
-                      name="email_address"
-                      placeholder="E-mail"
-                    />
-                  </label>
-                  <button class="subscribe-btn" type="submit">
-                    Subscribe
-                    <svg class="send-icon" width="24" height="24">
-                      <use href="./images/icons.svg#icon-send"></use>
-                    </svg>
-                  </button>
-                </div>
+            <form>
+              <p class="p-subscribe">Subscribe</p>
+              <div class="form-subscribe">
+                <label>
+                  <input
+                    class="input-subscribe"
+                    type="email"
+                    name="email_address"
+                    placeholder="E-mail"
+                  />
+                </label>
+                <button class="subscribe-btn" type="submit">
+                  Subscribe
+                  <svg class="send-icon" width="24" height="24">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
               </div>
             </form>
           </div>
@@ -563,33 +561,53 @@
 
     <div class="modal-overlay">
       <div class="modal">
-        <button type="button" class="close-btn">&times;</button>
+        <button type="button" class="close-btn">
+          <svg class="cross-svg" width="8" height="8" viewBox="0 0 8 8">
+            <use href="./images/icons.svg#icon-cross"></use>
+          </svg>
+        </button>
         <p>Leave your contacts and we will call you back</p>
         <form class="contact-form">
           <label class="contact-label">
             Name
-            <input class="contact-input" type="text" name="name" />
+            <div class="person-icon">
+              <input class="contact-input" type="text" name="name" />
+            </div>
           </label>
           <label class="contact-label">
             Phone
-            <input class="contact-input" type="tel" name="tel" />
+            <div class="phone-icon">
+              <input class="contact-input" type="tel" name="tel" />
+            </div>
           </label>
           <label class="contact-label">
             Email
-            <input class="contact-input" type="email" name="email" />
+            <div class="email-icon">
+              <input class="contact-input" type="email" name="email" />
+            </div>
           </label>
           <label class="contact-label">
             Comment
-            <textarea class="contact-input comment" name="comment"></textarea>
+            <textarea
+              class="contact-input comment"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
           </label>
-          <label for="agree" class="licence-checkbox">
+          <label for="agree" class="privacy-text">
             <input
               type="checkbox"
               id="agree"
               name="license"
               value="accepted"
               required
+              class="visually-hidden"
             />
+            <span class="checkbox">
+              <svg height="8" width="10" class="icon-checkbox">
+                <use xlink:href="./images/icons.svg#mark"></use>
+              </svg>
+            </span>
             I accept the terms and conditions of the
             <a href="#" class="licence-link">Privacy Policy</a>
           </label>
