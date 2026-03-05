@@ -477,6 +477,11 @@ footer .logo {
 
 .input-subscribe {
   background-color: #2e2f42;
+  color: #fff;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+
   border: 1px solid #fff;
   border-radius: 4px;
   height: 40px;
@@ -489,6 +494,8 @@ footer .logo {
 .input-subscribe::placeholder {
   color: #fff;
   font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
   padding-top: 8px;
   padding-bottom: 8px;
 }
@@ -581,6 +588,18 @@ footer .logo {
   position: absolute;
   top: 24px;
   right: 24px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  background-color: #404bbf;
+}
+
+.close-btn:hover .cross-svg,
+.close-btn:focus .cross-svg {
+  fill: #fff;
 }
 
 .cross-svg {
@@ -589,6 +608,8 @@ footer .logo {
   flex-shrink: 0;
   z-index: 2;
   fill: #2e2f42;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal p {
@@ -622,6 +643,12 @@ footer .logo {
   border-radius: 4px;
   width: 360px;
   height: 40px;
+}
+
+.icon-person,
+.icon-phone,
+.icon-email {
+  fill: #2e2f42;
 }
 
 input,
@@ -665,16 +692,17 @@ textarea:focus {
   cursor: pointer;
   width: 16px;
   height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
 
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
 
-  fill: #4d5ae5 !important;
-  stroke: #404bbf !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  color: #4d5ae5;
+input[type="checkbox"]:checked + label .checkbox {
+  background-color: #404bbf;
+  fill: #fff;
 }
 
 .privacy-text {
@@ -682,6 +710,9 @@ textarea:focus {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #757575;
+
+  display: inline-flex;
+  column-gap: 8px;
 }
 
 .licence-link {
