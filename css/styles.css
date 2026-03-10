@@ -678,6 +678,10 @@ textarea:focus {
   border-color: #4d5ae5;
 }
 
+input:focus + .modal-form-icon {
+  fill: #4d5ae5;
+}
+
 .comment {
   width: 360px;
   height: 120px;
@@ -714,7 +718,7 @@ textarea:focus {
   align-items: center;
 }
 
-input[type="checkbox"]:checked + label .checkbox {
+input[type="checkbox"]:checked + .checkbox {
   background-color: #404bbf;
   fill: #fff;
 }
@@ -751,13 +755,23 @@ input[type="checkbox"]:checked + label .checkbox {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  cursor: pointer;
   background-color: #4d5ae5;
   color: #fff;
   border: none;
   border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   margin: auto;
   height: 56px;
   width: 169px;
   padding: 0;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.send-btn:hover,
+.send-btn:focus {
+  background-color: #404bbf;
 }
