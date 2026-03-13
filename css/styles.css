@@ -711,7 +711,6 @@ input:focus + .modal-form-icon {
   line-height: 1.17;
   letter-spacing: 0.04em;
   font-size: 12px;
-  margin-bottom: 8px;
 }
 
 .visually-hidden {
@@ -795,7 +794,7 @@ input[type="checkbox"]:checked + .checkbox {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
   margin: auto;
-  margin-top: 16px;
+  margin-top: 24px;
   height: 56px;
   width: 169px;
   padding: 0;
